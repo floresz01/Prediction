@@ -28,7 +28,7 @@
                 var markets = await exch.load_markets();
                 var symbols = exch.symbols
                 console.log(symbols)
-                var ndata  = await exch.fetchOHLCV('ETH/USD','1m' /*symbols[0]*/)
+                var ndata  = await exch.fetchOHLCV('ETH/USD','60m' /*symbols[0]*/)
                 var cdata = [];
                 for(d in ndata){cdata.push([new Date(ndata[d][0])+'',ndata[d][1],ndata[d][2],ndata[d][3],ndata[d][4]])}
                 var data0 = splitData(cdata)
